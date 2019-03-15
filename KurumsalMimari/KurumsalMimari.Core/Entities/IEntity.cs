@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KurumsalMimari.Core
+namespace KurumsalMimari.Core.Entities
 {
-    public class Class1
+    public interface IEntity
     {
     }
 }
