@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KurumsalMimari.Core.DataAccess.EntityFramework;
+﻿using KurumsalMimari.Core.DataAccess.EntityFramework;
 using KurumsalMimari.Northwind.DataAccess.Abstract;
 using KurumsalMimari.Northwind.Entities.Concrete;
 
