@@ -72,6 +72,7 @@
     <Compile Include="DataAccess\IQueryableRepository.cs" />
     <Compile Include="DataAccess\NHibernate\NhEntityRepositoryBase.cs" />
     <Compile Include="DataAccess\NHibernate\NHibernateHelper.cs" />
+    <Compile Include="DataAccess\NHibernate\NhQueryableRepository.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
