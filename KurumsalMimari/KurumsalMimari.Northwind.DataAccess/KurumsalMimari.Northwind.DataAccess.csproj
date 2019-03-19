@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IProductDAL.cs" />
     <Compile Include="Concrete\EntityFramework\EfProductDAL.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ProductMap.cs" />
     <Compile Include="Concrete\EntityFramework\NorthwindContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using KurumsalMimari.Northwind.DataAccess.Concrete.EntityFramework.Mappings;
 using KurumsalMimari.Northwind.Entities.Concrete;
 
 namespace KurumsalMimari.Northwind.DataAccess.Concrete.EntityFramework
@@ -11,5 +12,10 @@ namespace KurumsalMimari.Northwind.DataAccess.Concrete.EntityFramework
         }
 
         public DbSet<Product> Products { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new ProductMap());
+        }
     }
 }
