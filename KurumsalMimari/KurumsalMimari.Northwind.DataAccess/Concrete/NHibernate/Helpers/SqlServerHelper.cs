@@ -11,7 +11,7 @@ using NHibernate;
 
 namespace KurumsalMimari.Northwind.DataAccess.Concrete.NHibernate.Helpers
 {
-    class SqlServerHelper : NHibernateHelper
+    public class SqlServerHelper : NHibernateHelper
     {
         protected override ISessionFactory InitializeFactory()
         {

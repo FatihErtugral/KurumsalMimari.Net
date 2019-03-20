@@ -9,10 +9,10 @@ namespace KurumsalMimari.Northwind.Entities.Concrete
 {
     public class Product:IEntity
     {
-        public int ProductID { get; set; }
-        public string ProductName { get; set; }
-        public int CategoryID { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public decimal UnitPrice { get; set; }
+        public virtual int ProductID { get; set; }
+        public virtual string ProductName { get; set; }
+        public virtual int CategoryID { get; set; }
+        public virtual string QuantityPerUnit { get; set; }
+        public virtual decimal UnitPrice { get; set; }
     }
 }
