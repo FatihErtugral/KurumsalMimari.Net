@@ -41,6 +41,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KurumsalMimari.Northwind.Wc
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurumsalMimari.Northwind.Business.Tests", "KurumsalMimari.Northwind.Business.Tests\KurumsalMimari.Northwind.Business.Tests.csproj", "{0ABDBB09-5963-45AD-8063-3C7384DB0D08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{D5B4307F-12C8-4529-B1A4-464BDBAFB175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5B4307F-12C8-4529-B1A4-464BDBAFB175}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{D5B4307F-12C8-4529-B1A4-464BDBAFB175}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
