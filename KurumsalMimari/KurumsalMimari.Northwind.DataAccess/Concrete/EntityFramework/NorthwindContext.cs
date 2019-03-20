@@ -4,7 +4,7 @@ using KurumsalMimari.Northwind.Entities.Concrete;
 
 namespace KurumsalMimari.Northwind.DataAccess.Concrete.EntityFramework
 {
-    class NorthwindContext: DbContext
+    public class NorthwindContext: DbContext
     {
         public NorthwindContext()
         {

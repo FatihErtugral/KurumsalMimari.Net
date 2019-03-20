@@ -4,7 +4,8 @@ using KurumsalMimari.Northwind.Entities.Concrete;
 
 namespace KurumsalMimari.Northwind.DataAccess.Concrete.EntityFramework
 {
-    public class EfProductDAL:EfEntityRepositoryBase<Product, NorthwindContext>, IProductDAL
+    public class EfProductDAL :EfEntityRepositoryBase<Product, NorthwindContext>, IProductDAL
     {
+       
     }
 }

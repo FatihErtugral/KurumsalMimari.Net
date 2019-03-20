@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurumsalMimari.Northwind.Mv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurumsalMimari.Northwind.DataAccess.Tests", "KurumsalMimari.Northwind.DataAccess.Tests\KurumsalMimari.Northwind.DataAccess.Tests.csproj", "{5D2E8F50-0BEC-4B91-942D-45B80D3AD7C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurumsalMimari.Northwind.Business.Tests", "KurumsalMimari.Northwind.Business.Tests\KurumsalMimari.Northwind.Business.Tests.csproj", "{0ABDBB09-5963-45AD-8063-3C7384DB0D08}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurumsalMimari.Northwind.WebApi", "KurumsalMimari.Northwind.WebApi\KurumsalMimari.Northwind.WebApi.csproj", "{8C4400C5-8AF1-4D4F-921B-9265AA5C5885}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KurumsalMimari.Northwind.WcfService", "KurumsalMimari.Northwind.WcfService\", "{D5B4307F-12C8-4529-B1A4-464BDBAFB175}"
@@ -77,10 +75,6 @@ Global
 		{5D2E8F50-0BEC-4B91-942D-45B80D3AD7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D2E8F50-0BEC-4B91-942D-45B80D3AD7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D2E8F50-0BEC-4B91-942D-45B80D3AD7C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0ABDBB09-5963-45AD-8063-3C7384DB0D08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C4400C5-8AF1-4D4F-921B-9265AA5C5885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C4400C5-8AF1-4D4F-921B-9265AA5C5885}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C4400C5-8AF1-4D4F-921B-9265AA5C5885}.Release|Any CPU.ActiveCfg = Release|Any CPU
