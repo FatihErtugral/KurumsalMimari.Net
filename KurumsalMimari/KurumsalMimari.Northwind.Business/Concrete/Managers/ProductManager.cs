@@ -21,9 +21,10 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
             _productDAL = productDAL;
         }
 
+        [FluentValidationAspect(typeof(ProductValidatior))]
         public Product Add(Product product)
         {
-            ValidatorTool.FluentValidate(new ProductValidatior(), product);
+            //ValidatorTool.FluentValidate(new ProductValidatior(), product);
             return _productDAL.Add(product);
         }
 
@@ -32,7 +33,7 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
             return _productDAL.GetList();
         }
 
-        [FluentValidationAspect(typeof(ProductValidatior))]
+        
         public Product GetById(int id)
         {
             return _productDAL.Get(p => p.ProductID == id);

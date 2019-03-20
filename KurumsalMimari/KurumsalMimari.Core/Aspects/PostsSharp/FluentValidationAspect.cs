@@ -9,7 +9,7 @@ using PostSharp.Aspects;
 
 namespace KurumsalMimari.Core.Aspects.PostsSharp
 {
-    //[Serializable]
+    [Serializable]
     public class FluentValidationAspect:OnMethodBoundaryAspect
     {
         Type _validatorType;
