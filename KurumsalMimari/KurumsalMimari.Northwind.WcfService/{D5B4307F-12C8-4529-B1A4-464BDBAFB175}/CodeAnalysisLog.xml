@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Localized>
+  <String Key="Category">Kategori</String>
+  <String Key="Certainty">Kesinlik</String>
+  <String Key="CollapseAll">Tümünü Daralt</String>
+  <String Key="CheckId">Kimliği Denetle</String>
+  <String Key="Error">Hata</String>
+  <String Key="Errors">hata(lar)</String>
+  <String Key="ExpandAll">Tümünü Genişlet</String>
+  <String Key="Help">Yardım</String>
+  <String Key="Line">Çizgi</String>
+  <String Key="Messages">ileti(ler)</String>
+  <String Key="LocationNotStoredInPdb">[Konum Pdb içinde saklanmıyorl]</String>
+  <String Key="Project">Proje</String>
+  <String Key="Resolution">Çözünürlük</String>
+  <String Key="Rule">Kural</String>
+  <String Key="RuleFile">Kural Dosyası</String>
+  <String Key="RuleDescription">Kural Açıklaması</String>
+  <String Key="Source">Kaynak</String>
+  <String Key="Status">Durum</String>
+  <String Key="Target">Hedef</String>
+  <String Key="Warning">Uyarı</String>
+  <String Key="Warnings">uyarı(lar)</String>
+  <String Key="ReportTitle">Kod Analizi Raporu</String>
+ </Localized>
+</FxCopReport>
