@@ -71,6 +71,7 @@
     <Compile Include="Abstract\IProductService.cs" />
     <Compile Include="Concrete\Managers\ProductManager.cs" />
     <Compile Include="DependecyResolvers\Ninject\BusinessModule.cs" />
+    <Compile Include="DependecyResolvers\Ninject\ValidationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\FluentValidation\ProductValidatior.cs" />
   </ItemGroup>
