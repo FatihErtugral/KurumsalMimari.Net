@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KurumsalMimari.Core.CrossCuttingConcerns.Validation.FluentValidation;
+﻿using System.Collections.Generic;
+using KurumsalMimari.Core.Aspects.PostsSharp;
+using KurumsalMimari.Core.Aspects.PostsSharp.TransactionAspects;
 using KurumsalMimari.Northwind.Business.Abstract;
 using KurumsalMimari.Northwind.Business.ValidationRules.FluentValidation;
 using KurumsalMimari.Northwind.DataAccess.Abstract;
 using KurumsalMimari.Northwind.Entities.Concrete;
-using KurumsalMimari.Core.Aspects.PostsSharp;
 
 namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 {
@@ -37,6 +33,14 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
         public Product GetById(int id)
         {
             return _productDAL.Get(p => p.ProductID == id);
+        }
+        
+        [TransactionScopeAspect]
+        public void TransactionalOperation(Product product1, Product product2)
+        {
+            _productDAL.Add(product1);
+            //
+            _productDAL.Update(product2);
         }
 
         [FluentValidationAspect(typeof(ProductValidatior))]
