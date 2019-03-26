@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="Aspects\PostsSharp\TransactionAspects\TransactionScopeAspect.cs" />
     <Compile Include="Aspects\PostsSharp\ValidationAspects\FluentValidationAspect.cs" />
+    <Compile Include="CrossCuttingConcerns\Caching\ICacheManager.cs" />
     <Compile Include="CrossCuttingConcerns\Validation\FluentValidation\ValidatorTool.cs" />
     <Compile Include="DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="DataAccess\EntityFramework\EfQueryableRepository.cs" />
