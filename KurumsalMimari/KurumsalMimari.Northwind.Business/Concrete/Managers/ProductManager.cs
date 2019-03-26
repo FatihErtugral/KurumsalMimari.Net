@@ -20,6 +20,7 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
         }
 
         [FluentValidationAspect(typeof(ProductValidatior))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
             //ValidatorTool.FluentValidate(new ProductValidatior(), product);
