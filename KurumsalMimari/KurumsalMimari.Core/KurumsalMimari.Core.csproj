@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspects\PostsSharp\CacheAspects\CacheAspect.cs" />
     <Compile Include="Aspects\PostsSharp\TransactionAspects\TransactionScopeAspect.cs" />
     <Compile Include="Aspects\PostsSharp\ValidationAspects\FluentValidationAspect.cs" />
     <Compile Include="CrossCuttingConcerns\Caching\ICacheManager.cs" />

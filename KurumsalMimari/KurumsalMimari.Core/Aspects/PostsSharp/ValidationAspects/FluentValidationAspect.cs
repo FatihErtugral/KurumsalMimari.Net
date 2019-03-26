@@ -7,7 +7,7 @@ using FluentValidation;
 using KurumsalMimari.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using PostSharp.Aspects;
 
-namespace KurumsalMimari.Core.Aspects.PostsSharp
+namespace KurumsalMimari.Core.Aspects.PostsSharp.ValidationAspects
 {
     [Serializable]
     public class FluentValidationAspect:OnMethodBoundaryAspect

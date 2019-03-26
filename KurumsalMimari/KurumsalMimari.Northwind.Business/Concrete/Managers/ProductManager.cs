@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
-using KurumsalMimari.Core.Aspects.PostsSharp;
+using KurumsalMimari.Core.Aspects.PostsSharp.ValidationAspects;
+using KurumsalMimari.Core.Aspects.PostsSharp.CacheAspects;
 using KurumsalMimari.Core.Aspects.PostsSharp.TransactionAspects;
+using KurumsalMimari.Core.CrossCuttingConcerns.Caching.Microsoft;
 using KurumsalMimari.Northwind.Business.Abstract;
 using KurumsalMimari.Northwind.Business.ValidationRules.FluentValidation;
 using KurumsalMimari.Northwind.DataAccess.Abstract;
@@ -24,6 +26,7 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
             return _productDAL.Add(product);
         }
 
+        [CacheAspect(typeof(MemoryCacheManager))]
         public List<Product> GetAll()
         {
             return _productDAL.GetList();

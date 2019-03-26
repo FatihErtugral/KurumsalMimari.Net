@@ -8,6 +8,7 @@ using PostSharp.Aspects;
 
 namespace KurumsalMimari.Core.Aspects.PostsSharp.TransactionAspects
 {
+    [Serializable]
     public class TransactionScopeAspect:OnMethodBoundaryAspect
     {
         TransactionScopeOption _option;
