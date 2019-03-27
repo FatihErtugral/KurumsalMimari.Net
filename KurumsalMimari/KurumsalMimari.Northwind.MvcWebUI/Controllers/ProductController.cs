@@ -39,5 +39,25 @@ namespace KurumsalMimari.Northwind.MvcWebUI.Controllers
             return "Added";
             //localhost:xxxx/Product/Add
         }
+
+        public string AddUpdate() //Transaction Scope Aspect Testi
+        {
+            _productService.TransactionalOperation(new Product
+            {
+                CategoryID = 1,
+                ProductName = "Computer1",
+                QuantityPerUnit = "1",
+                UnitPrice = 24
+            },new Product
+            {
+                CategoryID = 1,
+                ProductName = "Computer2",
+                QuantityPerUnit = "1",
+                UnitPrice = 30,// Bu değeri 20 nin altında yaparsak bir hata fırlatıcak ve önceki kaydı geri silecektir.
+                ProductID = 2
+            });
+
+            return "Done";
+        }
     }
 }
