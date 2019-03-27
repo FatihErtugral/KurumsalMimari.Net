@@ -14,7 +14,6 @@ namespace KurumsalMimari.Core.CrossCuttingConcerns.Logging.Log4Net.Layouts
     {
         public override void ActivateOptions()
         {
-            throw new NotImplementedException();
         }
 
         public override void Format(TextWriter writer, LoggingEvent loggingEvent)

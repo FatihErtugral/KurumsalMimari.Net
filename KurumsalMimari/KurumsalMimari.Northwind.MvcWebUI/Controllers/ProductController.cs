@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using KurumsalMimari.Northwind.Business.Abstract;
+using KurumsalMimari.Northwind.Entities.Concrete;
 using KurumsalMimari.Northwind.MvcWebUI.Models;
 
 namespace KurumsalMimari.Northwind.MvcWebUI.Controllers
@@ -24,6 +25,19 @@ namespace KurumsalMimari.Northwind.MvcWebUI.Controllers
                 Products = _productService.GetAll()
             };
             return View(model);
+        }
+
+        public string Add()
+        {
+            _productService.Add(new Product
+            {
+                CategoryID = 1,
+                ProductName = "GSM",
+                QuantityPerUnit = "1",
+                UnitPrice = 21
+            });
+            return "Added";
+            //localhost:xxxx/Product/Add
         }
     }
 }
