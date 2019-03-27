@@ -7,6 +7,8 @@ using KurumsalMimari.Northwind.Business.Abstract;
 using KurumsalMimari.Northwind.Business.ValidationRules.FluentValidation;
 using KurumsalMimari.Northwind.DataAccess.Abstract;
 using KurumsalMimari.Northwind.Entities.Concrete;
+using KurumsalMimari.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
+using KurumsalMimari.Core.Aspects.PostsSharp.LogAspects;
 
 namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 {
@@ -28,6 +30,7 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
         }
 
         [CacheAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DatabaseLogger))]
         public List<Product> GetAll()
         {
             return _productDAL.GetList();
