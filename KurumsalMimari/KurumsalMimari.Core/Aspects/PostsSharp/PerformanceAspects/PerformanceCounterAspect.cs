@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PostSharp.Aspects;
 
-namespace KurumsalMimari.Core.PerformanceAspects
+namespace KurumsalMimari.Core.Aspects.PostsSharp.PerformanceAspects
 {
     [Serializable]
     public class PerformanceCounterAspect:OnMethodBoundaryAspect

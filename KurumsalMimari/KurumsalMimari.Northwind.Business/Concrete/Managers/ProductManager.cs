@@ -9,6 +9,8 @@ using KurumsalMimari.Northwind.DataAccess.Abstract;
 using KurumsalMimari.Northwind.Entities.Concrete;
 using KurumsalMimari.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using KurumsalMimari.Core.Aspects.PostsSharp.LogAspects;
+using KurumsalMimari.Core.Aspects.PostsSharp.PerformanceAspects;
+using System.Threading;
 
 namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 {
@@ -32,10 +34,12 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
         }
 
         [CacheAspect(typeof(MemoryCacheManager))]
+        [PerformanceCounterAspect(2)]
         //[LogAspect(typeof(DatabaseLogger))]
         //[LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
         {
+            Thread.Sleep(3000);
             return _productDAL.GetList();
         }
 
