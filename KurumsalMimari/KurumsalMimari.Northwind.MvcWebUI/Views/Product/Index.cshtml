@@ -1,0 +1,22 @@
+﻿@model KurumsalMimari.Northwind.MvcWebUI.Models.ProductListViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @foreach (var product in Model.Products)
+        {
+            @product.ProductName
+            <br/>
+        }
+    </div>
+</body>
+</html>
