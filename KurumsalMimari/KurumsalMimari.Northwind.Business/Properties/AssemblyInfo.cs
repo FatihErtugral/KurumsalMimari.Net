@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using KurumsalMimari.Core.Aspects.PostsSharp.LogAspects;
+using KurumsalMimari.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 
 // Bir bütünleştirilmiş koda ilişkin Genel Bilgiler aşağıdaki öznitelikler kümesiyle
 // denetlenir. Bütünleştirilmiş kod ile ilişkili bilgileri değiştirmek için
@@ -13,7 +15,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
+[assembly: LogAspect(typeof(FileLogger), AttributeTargetTypes = "KurumsalMimari.Northwind.Business.Concrete.Managers.*")]// Bütün Manager'ları logla diyebiliyorum.
+[assembly: LogAspect(typeof(DatabaseLogger), AttributeTargetTypes = "KurumsalMimari.Northwind.Business.Concrete.Managers.*")]// Bütün Manager'ları logla diyebiliyorum.
 // ComVisible özniteliğinin false olarak ayarlanması bu bütünleştirilmiş koddaki türleri
 // COM bileşenleri için görünmez yapar. Bu bütünleştirilmiş koddaki bir türe
 // erişmeniz gerekirse ComVisible özniteliğini o türde true olarak ayarlayın.

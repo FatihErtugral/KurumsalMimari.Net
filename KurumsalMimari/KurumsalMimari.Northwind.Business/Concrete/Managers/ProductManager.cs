@@ -12,6 +12,7 @@ using KurumsalMimari.Core.Aspects.PostsSharp.LogAspects;
 
 namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 {
+    //[LogAspect(typeof(FileLogger))] // Buraya yazarsak Class'ımızdaki bütün metotlar loglanıcaktır.
     public class ProductManager : IProductService
     {
         private IProductDAL _productDAL;
@@ -23,7 +24,7 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 
         [FluentValidationAspect(typeof(ProductValidatior))]
         [CacheRemoveAspect(typeof(MemoryCacheManager))]
-        [LogAspect(typeof(FileLogger))]
+        //[LogAspect(typeof(FileLogger))]
         public Product Add(Product product)
         {
             //ValidatorTool.FluentValidate(new ProductValidatior(), product);
@@ -31,8 +32,8 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
         }
 
         [CacheAspect(typeof(MemoryCacheManager))]
-        [LogAspect(typeof(DatabaseLogger))]
-        [LogAspect(typeof(FileLogger))]
+        //[LogAspect(typeof(DatabaseLogger))]
+        //[LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
         {
             return _productDAL.GetList();
