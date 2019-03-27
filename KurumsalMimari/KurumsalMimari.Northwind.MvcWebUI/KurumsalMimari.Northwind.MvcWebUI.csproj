@@ -45,6 +45,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="PostSharp, Version=4.2.17.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
       <HintPath>..\packages\PostSharp.4.2.17\lib\net35-client\PostSharp.dll</HintPath>
       <Private>True</Private>
@@ -121,6 +124,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KurumsalMimari.Core\KurumsalMimari.Core.csproj">
+      <Project>{7F6A67DD-DD20-4E06-82EF-AC12F64FE4A3}</Project>
+      <Name>KurumsalMimari.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KurumsalMimari.Northwind.Business\KurumsalMimari.Northwind.Business.csproj">
       <Project>{C7CE6E4C-34CA-49F8-BCE5-1EEDE2B9097B}</Project>
       <Name>KurumsalMimari.Northwind.Business</Name>

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using KurumsalMimari.Core.Utilities.Mvc.Infrastructure;
+using KurumsalMimari.Northwind.Business.DependecyResolvers.Ninject;
 
 namespace KurumsalMimari.Northwind.MvcWebUI
 {
@@ -13,6 +15,8 @@ namespace KurumsalMimari.Northwind.MvcWebUI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory(new BusinessModule()));
         }
     }
 }
