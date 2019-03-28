@@ -12,6 +12,7 @@ using KurumsalMimari.Core.Aspects.PostsSharp.LogAspects;
 using KurumsalMimari.Core.Aspects.PostsSharp.PerformanceAspects;
 using System.Threading;
 using KurumsalMimari.Core.Aspects.PostsSharp.AuthorizationAspects;
+using System.Linq;
 
 namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 {
@@ -36,13 +37,21 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 
         [CacheAspect(typeof(MemoryCacheManager))]
         [PerformanceCounterAspect(2)]
-        [SecuredOperationAspect(Roles="Admin,Editor")]
+        //[SecuredOperationAspect(Roles="Admin,Editor")]
         //[LogAspect(typeof(DatabaseLogger))]
         //[LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
         {
-            Thread.Sleep(3000);
-            return _productDAL.GetList();
+            //Thread.Sleep(3000);
+
+            return _productDAL.GetList().Select(p => new Product
+            {
+                CategoryID = p.CategoryID,
+                ProductID = p.ProductID,
+                ProductName = p.ProductName,
+                QuantityPerUnit = p.QuantityPerUnit,
+                UnitPrice = p.UnitPrice
+            }).ToList();
         }
 
         

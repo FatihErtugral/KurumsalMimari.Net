@@ -11,6 +11,7 @@ using KurumsalMimari.Northwind.Business.Abstract;
 using KurumsalMimari.Northwind.Business.Concrete.Managers;
 using KurumsalMimari.Northwind.DataAccess.Abstract;
 using KurumsalMimari.Northwind.DataAccess.Concrete.EntityFramework;
+using KurumsalMimari.Northwind.DataAccess.Concrete.NHibernate;
 using KurumsalMimari.Northwind.DataAccess.Concrete.NHibernate.Helpers;
 using Ninject.Modules;
 
