@@ -71,10 +71,13 @@
   <ItemGroup>
     <Compile Include="Abstract\ICategoryDAL.cs" />
     <Compile Include="Abstract\IProductDAL.cs" />
+    <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCategoryDAL.cs" />
     <Compile Include="Concrete\EntityFramework\EfProductDAL.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\CategoryMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ProductMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UserMap.cs" />
     <Compile Include="Concrete\EntityFramework\NorthwindContext.cs" />
     <Compile Include="Concrete\NHibernate\Helpers\SqlServerHelper.cs" />
     <Compile Include="Concrete\NHibernate\Mappings\CategoryMap.cs" />
