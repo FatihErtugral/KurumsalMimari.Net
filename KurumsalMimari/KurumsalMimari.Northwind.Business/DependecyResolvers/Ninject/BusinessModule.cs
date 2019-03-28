@@ -21,7 +21,10 @@ namespace KurumsalMimari.Northwind.Business.DependecyResolvers.Ninject
         public override void Load()
         {
             Bind<IProductService>().To<ProductManager>().InSingletonScope();
-            Bind<IProductDAL>().To<EfProductDAL>();
+            Bind<IProductDAL>().To<EfProductDAL>().InSingletonScope();
+
+            Bind<IUserService>().To<UserManager>();
+            Bind<IUserDal>().To<EfUserDal>();
 
             Bind(typeof(IQueryableRepository<>)).To(typeof(EfQueryableRepository<>));
             Bind<DbContext>().To<NorthwindContext>();
