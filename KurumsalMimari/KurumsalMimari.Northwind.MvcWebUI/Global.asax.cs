@@ -35,7 +35,7 @@ namespace KurumsalMimari.Northwind.MvcWebUI
             {
                 var authCookie = HttpContext.Current.Request.Cookies[FormsAuthentication.FormsCookieName];
 
-                if (authCookie != null)
+                if (authCookie == null)
                 {
                     return;
                 }
