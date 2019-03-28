@@ -19,13 +19,13 @@ namespace KurumsalMimari.Core.Aspects.PostsSharp.AuthorizationAspects
             bool isAuthorized = false;
             for (int i = 0; i < roles.Length; i++)
             {
-                if (!System.Threading.Thread.CurrentPrincipal.IsInRole(roles[i]))
+                if (System.Threading.Thread.CurrentPrincipal.IsInRole(roles[i]))
                 {
                     isAuthorized = true;
                 }
             }
 
-            if (!isAuthorized)
+            if (isAuthorized == false)
             {
                 throw new SecurityException("You are not authorized!");
             }

@@ -36,7 +36,7 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 
         [CacheAspect(typeof(MemoryCacheManager))]
         [PerformanceCounterAspect(2)]
-        [SecuredOperationAspect(Roles="Admin")]
+        [SecuredOperationAspect(Roles="Admin,Editor")]
         //[LogAspect(typeof(DatabaseLogger))]
         //[LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
