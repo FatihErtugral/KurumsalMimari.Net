@@ -28,7 +28,7 @@ namespace KurumsalMimari.Northwind.MvcWebUI.Controllers
                 user.UserName,
                 user.Email,
                 DateTime.Now.AddDays(15),
-                _userService.GetUserRoles(user).Select(u => u.RoleName).ToArray(),
+                new[] { "Admin" },
                 false,
                 user.FirstName,
                 user.LastName);
