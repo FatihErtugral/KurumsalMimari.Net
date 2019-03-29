@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using KurumsalMimari.Northwind.WebApi.MessageHandlers;
 
 namespace KurumsalMimari.Northwind.WebApi
 {
@@ -10,7 +11,7 @@ namespace KurumsalMimari.Northwind.WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API yapılandırması ve hizmetleri
-
+            config.MessageHandlers.Add(new AutohenticationHandler());
             // Web API yolları
             config.MapHttpAttributeRoutes();
 
