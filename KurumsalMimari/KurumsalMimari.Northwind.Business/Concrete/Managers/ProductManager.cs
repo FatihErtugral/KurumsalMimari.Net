@@ -13,6 +13,8 @@ using KurumsalMimari.Core.Aspects.PostsSharp.PerformanceAspects;
 using System.Threading;
 using KurumsalMimari.Core.Aspects.PostsSharp.AuthorizationAspects;
 using System.Linq;
+using AutoMapper;
+using KurumsalMimari.Core.Utilities.Mappings;
 
 namespace KurumsalMimari.Northwind.Business.Concrete.Managers
 {
@@ -44,17 +46,21 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
         {
             //Thread.Sleep(3000);
 
-            return _productDAL.GetList().Select(p => new Product
-            {
-                CategoryID = p.CategoryID,
-                ProductID = p.ProductID,
-                ProductName = p.ProductName,
-                QuantityPerUnit = p.QuantityPerUnit,
-                UnitPrice = p.UnitPrice
-            }).ToList();
+            //return _productDAL.GetList().Select(p => new Product
+            //{
+            //    CategoryID = p.CategoryID,
+            //    ProductID = p.ProductID,
+            //    ProductName = p.ProductName,
+            //    QuantityPerUnit = p.QuantityPerUnit,
+            //    UnitPrice = p.UnitPrice
+            //}).ToList();
+
+            var products = AutoMapperHelper.MapToSameTypeList<Product>(_productDAL.GetList());
+            return products;
         }
 
         
+
         public Product GetById(int id)
         {
             return _productDAL.Get(p => p.ProductID == id);
