@@ -66,7 +66,7 @@ namespace KurumsalMimari.Northwind.WebApi.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Load(new BusinessModule());
+            kernel.Load(new BusinessModule(), new AutoMapperModule());
         }        
     }
 }

@@ -22,10 +22,12 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
     public class ProductManager : IProductService
     {
         private IProductDAL _productDAL;
+        private readonly IMapper _mapper;
 
-        public ProductManager(IProductDAL productDAL)
+        public ProductManager(IProductDAL productDAL, IMapper mapper)
         {
             _productDAL = productDAL;
+            _mapper = mapper;
         }
 
         [FluentValidationAspect(typeof(ProductValidatior))]
@@ -55,7 +57,7 @@ namespace KurumsalMimari.Northwind.Business.Concrete.Managers
             //    UnitPrice = p.UnitPrice
             //}).ToList();
 
-            var products = AutoMapperHelper.MapToSameTypeList<Product>(_productDAL.GetList());
+            var products = _mapper.Map<List<Product>>(_productDAL.GetList());
             return products;
         }
 
