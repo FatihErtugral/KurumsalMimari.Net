@@ -101,6 +101,7 @@
     <Compile Include="DependecyResolvers\Ninject\AutoMapperModule.cs" />
     <Compile Include="DependecyResolvers\Ninject\BusinessModule.cs" />
     <Compile Include="DependecyResolvers\Ninject\InstanceFactory.cs" />
+    <Compile Include="DependecyResolvers\Ninject\ServiceModule.cs" />
     <Compile Include="DependecyResolvers\Ninject\ValidationModule.cs" />
     <Compile Include="Mappings\AutoMapper\Profiles\BusinessProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
